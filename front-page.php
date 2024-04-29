@@ -10,5 +10,3 @@
  */
 
  get_header();
-
-dynamic_sidebar( 'new-sidebar' );
