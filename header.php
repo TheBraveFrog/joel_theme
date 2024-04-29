@@ -1,6 +1,6 @@
 <?php 
 /**
- * joel portfolio header
+ * Joel Portfolio Header
  *
  *
  * @package joel_portfolio

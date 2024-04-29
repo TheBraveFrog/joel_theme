@@ -1,6 +1,6 @@
 <?php
 /**
- * joel portfolio front page
+ * Joel Portfolio Front Page
  *
  *
  * @package joel_portfolio
