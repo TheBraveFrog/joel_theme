@@ -1,6 +1,6 @@
 <?php
 /**
- * joel portfolio functions and definitions
+ * Joel Portfolio Functions and Definitions
  *
  *
  * @package joel_portfolio
@@ -9,17 +9,15 @@
 /**
  */
 
-//  widgets
- function arphabet_widgets_init() {
+//  customize menus
+function register_my_menus() {
+    register_nav_menus(
+      array(
+        'header' => __( 'Header Menu' ),
+       )
+     );
+   }
+   add_action( 'init', 'register_my_menus' );
 
-	register_sidebar( array(
-		'name'          => 'Home right sidebar',
-		'id'            => 'home_right_1',
-		'before_widget' => '<div>',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="rounded">',
-		'after_title'   => '</h2>',
-	) );
-
-}
-add_action( 'widgets_init', 'arphabet_widgets_init' );
+//    blog images
+add_theme_support('post-thumbnails');
