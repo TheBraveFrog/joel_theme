@@ -23,7 +23,10 @@
 ?>
 
 <section class="home-banner">
-    <h1>I'm Joel Tobias. A Business Analyst in Edmonton</h1>
+    <div>
+        <h1>I'm Joel Tobias. A Business Analyst in Edmonton</h1>
+        <p>I’m probably the most passionate BA you will ever get to work with. If you have a great project that needs some amazing skills, I’m your guy.</p>
+    </div>
     <img class="site-image" src="<?php echo $image_one_size ?>" alt="<?php echo $image_one_alt ?>">
 </section>
 <section class="objectives">
