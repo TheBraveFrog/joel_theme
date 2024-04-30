@@ -25,27 +25,31 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-			<?php if (function_exists('the_custom_logo')) {
-				the_custom_logo();
-			} ?>
-		</div>
-        <div class="menu-container">
-            <?php  wp_nav_menu( array( 'theme_location' => 'header' ) );
-                wp_nav_menu(
-                    array(
-                    'menu' => 'primary',
-                    'theme_location' => '__no_such_location',
-                    'fallback_cb' => false
-                    )
-                ); ?>
+        <div class="nav-container">
+            <div class="logo">
+                <?php if (function_exists('the_custom_logo')) {
+                    the_custom_logo();
+                } ?>
+            </div>
+            <div class="button-space">
                 <svg class="nav-btn" fill="none" viewBox="0 0 24 24">
-					<g stroke="#ffff" stroke-linecap="round" stroke-width="2">
-						<path d="m4 18h16" />
-						<path d="m4 12h16" />
-						<path d="m4 6h16" />
-					</g>
-				</svg>
+                    <g stroke="#ffff" stroke-linecap="round" stroke-width="2">
+                        <path d="m4 18h16" />
+                        <path d="m4 12h16" />
+                        <path d="m4 6h16" />
+                    </g>
+                </svg>
+            </div>
+            <div class="menu-container">
+                <?php  wp_nav_menu( array( 'theme_location' => 'header' ) );
+                    wp_nav_menu(
+                        array(
+                        'menu' => 'primary',
+                        'theme_location' => '__no_such_location',
+                        'fallback_cb' => false
+                        )
+                    ); ?>
+            </div>
         </div>
     </header>
     
