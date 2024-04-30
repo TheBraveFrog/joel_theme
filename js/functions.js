@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('menu-toggle-btn').addEventListener('click', function() {
-        this.classList.toggle('open');
+    const navBtn = document.querySelector('.nav-btn');
+    const menuContainer = document.querySelector('.menu-main-nav-container');
+
+    navBtn.addEventListener('click', function() {
+        menuContainer.classList.toggle('menu-expanded');
     });
 });
