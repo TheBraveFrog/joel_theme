@@ -18,17 +18,170 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    font-size: 1.25rem;
     font-family: "Hind", sans-serif;
 }
 
-img {
-    width: 100%;
-}
+/* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
-.home-banner, .objectives, .story, .interests {
-    padding: 0 1rem;
+header {
+    padding: 1rem 1rem 0 1rem;
 }
 
 .custom-logo {
+    height: 2.5rem;
+    width: auto !important;
+}
+
+/* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+
+.home-banner h1, .objectives div, .story div, .interests div {
+    padding: 0 1rem;
+}
+
+.home-banner img, .objectives img, .story img, .interests img {
     width: 100%;
+    display: block;
+}
+
+.home-banner, .story {
+    background-color: #13131b;
+}
+
+.home-banner h1 {
+    font-size: 3rem;
+    height: auto;
+    background: -webkit-linear-gradient(#9945ff, #14f195);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.objectives h2, .story h2, .interests h2 {
+    font-size: 2rem;
+}
+
+
+
+@media screen and (min-width: 720px) {
+
+    /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
+
+        header {
+            padding: 1rem 3rem 0 3rem;
+        }
+
+        .custom-logo {
+            height: 3rem;
+        }
+
+   /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+
+        .home-banner h1, .objectives div, .story div, .interests div {
+            padding: 0 3rem;
+        }
+
+        .home-banner h1 {
+            font-size: 3.5rem;
+        }
+
+        .objectives h2, .story h2, .interests h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+@media screen and (min-width: 1080px) {
+
+/* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
+
+    header {
+        padding: 1rem 6rem 0 6rem;
+    }
+
+    .custom-logo {
+        height: 3rem;
+    }
+
+/* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+
+    .home-banner h1, .interests div {
+        padding: 0 6rem 0 3rem;
+    }
+
+    .objectives div {
+        padding: 0 6rem;
+    }
+
+    .story div {
+        padding: 0 3rem 0 6rem
+    }
+
+    .home-banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .objectives h2, .story h2, .interests h2 {
+        font-size: 2.5rem;
+    }
+
+    .home-banner, .story, .interests {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-banner img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .home-banner h1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .interests img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .interests div{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+/* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
+
+    header {
+        padding: 1rem 12rem 0 12rem;
+    }
+
+/* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+    
+    .home-banner h1, .interests div {
+        padding: 0 12rem 0 3rem;
+    }
+    
+    .objectives div {
+        padding: 0 12rem;
+    }
+    
+    .story div {
+        padding: 0 3rem 0 12rem
+    }
+    
+    .home-banner h1 {
+        font-size: 4rem;
+    }
+    
+    .objectives h2, .story h2, .interests h2 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .home-banner h1 {
+        font-size: 7rem;
+    }
 }
