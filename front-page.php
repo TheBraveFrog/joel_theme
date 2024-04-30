@@ -34,3 +34,5 @@
     <h2>Interests</h2>
     <img class="site-image" src="<?php echo $image_three_size ?>" alt="<?php echo $image_three_alt ?>">
 </section>
+
+<?php get_footer(); ?>
