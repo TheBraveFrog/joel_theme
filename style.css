@@ -27,12 +27,19 @@ p {
 
 header {
     padding: 1rem 1rem 0 1rem;
+    position: relative;
 }
 
 .custom-logo {
     height: 2.5rem;
     width: auto !important;
 }
+
+.menu-main-nav-container {
+    display: none;
+}
+
+
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
@@ -84,6 +91,7 @@ header {
     font-size: 2rem;
 }
 
+
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
 footer {
@@ -104,6 +112,11 @@ footer svg {
     width: 3rem;
     height: 3rem;
 }
+=======
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 
 
 
@@ -279,4 +292,8 @@ footer svg {
 .gallery-grid-wrapper {
     grid-template-columns: repeat(1, 1fr) !important;
   }
+
+
+
+
 
