@@ -26,7 +26,12 @@ get_header();
         while ($query->have_posts()) : $query->the_post();
             ?>
             <article>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <?php if (has_post_thumbnail()) : ?>
+                <div class="post-thumbnail">
+                    <?php the_post_thumbnail('large'); ?>
+                </div>
+                <?php endif; ?>
                 <div class="post-meta">
                     <p>Published on <?php the_date(); ?></p>
                 </div>

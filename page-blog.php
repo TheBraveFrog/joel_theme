@@ -4,7 +4,7 @@
  *
  * @package joel_portfolio
  */
-
+$title = "Blog";
 get_header();
 ?>
 
@@ -27,7 +27,7 @@ get_header();
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php if (has_post_thumbnail()) : ?>
                 <div class="post-thumbnail">
-                    <?php the_post_thumbnail('large'); ?>
+                    <?php the_post_thumbnail('small'); ?>
                 </div>
                 <?php endif; ?>
                 <?php
