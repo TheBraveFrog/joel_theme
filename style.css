@@ -27,12 +27,19 @@ p {
 
 header {
     padding: 1rem 1rem 0 1rem;
+    position: relative;
 }
 
 .custom-logo {
     height: 2.5rem;
     width: auto !important;
 }
+
+.menu-main-nav-container {
+    display: none;
+}
+
+
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
@@ -111,6 +118,11 @@ header {
 .objectives h2, .story h2, .interests h2 {
     font-size: 2rem;
 }
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 
 
 
@@ -261,10 +273,6 @@ header {
     }
 }
 
-}
 
-/* gallery */
-.gallery-grid-wrapper {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
+
 
