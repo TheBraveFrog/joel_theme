@@ -70,6 +70,28 @@ header {
     width: 4rem;
 }
 
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 10px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
 .home-banner div, .objectives div, .story div, .interests div {
@@ -120,6 +142,20 @@ header {
     font-size: 2rem;
 }
 
+/* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
+
+article {
+    align-items: center;
+    display: flex;
+}
+
+.conetent {
+    padding-left: 2rem;
+}
+
+.content p {
+    max-width: 70%;
+}
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
