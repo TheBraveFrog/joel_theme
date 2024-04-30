@@ -36,10 +36,38 @@ header {
 }
 
 .menu-main-nav-container {
-    display: none;
+    transform-origin: top;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
+.menu-expanded {
+    transform: scaleX(100%);
+}
 
+.menu-main-nav-container ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-main-nav-container ul.menu li {
+    margin: 0 10px; 
+}
+
+.menu-main-nav-container ul.menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-btn {
+    cursor: pointer;
+    width: 4rem;
+}
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
@@ -112,7 +140,7 @@ footer svg {
     width: 3rem;
     height: 3rem;
 }
-=======
+
 /* gallery */
 .gallery-grid-wrapper {
     grid-template-columns: repeat(1, 1fr) !important;
