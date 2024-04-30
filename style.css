@@ -43,13 +43,12 @@ header {
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
-.home-banner h1, .objectives div, .story div, .interests div {
+.home-banner div, .objectives div, .story div, .interests div {
     padding: 1rem;
 }
 
 .home-banner img, .objectives img, .story img, .interests img {
     width: 100%;
-
     display: block;
 }
 
@@ -58,41 +57,28 @@ header {
 }
 
 .objectives {
-    background-image: linear-gradient(135deg, #9945ff, #14f195);
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
     color: #000;
 }
 
 .objectives h2 {
     color: #13131b;
+    text-align: center;
 }
 
 .home-banner h1 {
     font-size: 3.5rem;
-    /*
-     height: auto;
-     background-image: linear-gradient(135deg, var(--c1, #9945ff), var(--c2, #14f195) 51%, var(--c1, #9945ff)) var(--x, 0)/ 200%;
-     transition: 0.5s;
-     background-size: 100%;
-     -webkit-background-clip: text;
-     -moz-background-clip: text;
-     -webkit-text-fill-color: transparent; 
-     -moz-text-fill-color: transparent; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background: linear-gradient(90deg, #9945ff, #14f195);
-    background-size: 200% 200%;
+    background-size: 150% 150%;
     animation: rainbow 5s ease-in-out infinite;
     background-clip: text;
     -webkit-background-clip:text;
     color:rgb(255, 255, 255);
     transition: color .2s ease-in-out;
- }
- 
- .home-banner h1:hover{
-     /* --x: 100%;
-     --c1: #14f195;
-     --c2: #9945ff; */
-     color:rgba(255, 255, 255, 0);
  }
  
  @keyframes rainbow { 
@@ -101,24 +87,32 @@ header {
      100%{background-position:left}
  }
 
-/* .home-banner h1 {
-   font-size: 3rem;
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-    background: linear-gradient(90deg, #9945ff, #14f195); 
-    background-color: #fff;
-    background-image: linear-gradient(90deg, #9945ff, #14f195);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
-} */
-
 .objectives h2, .story h2, .interests h2 {
     font-size: 2rem;
 }
 
+
+/* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
+
+footer {
+    background-color: #13131b;
+    padding: 3rem 1rem;
+}
+
+footer h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer svg {
+    width: 3rem;
+    height: 3rem;
+}
+=======
 /* gallery */
 .gallery-grid-wrapper {
     grid-template-columns: repeat(1, 1fr) !important;
@@ -140,7 +134,7 @@ header {
 
    /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
-        .home-banner h1, .story div, .interests div {
+        .home-banner div, .story div, .interests div {
             padding: 0 0 3rem 0;
         }
 
@@ -155,7 +149,14 @@ header {
         .objectives h2, .story h2, .interests h2 {
             font-size: 2.5rem;
         }
+
+     /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
+
+     footer {
+        background-color: #13131b;
+        padding: 3rem;
     }
+}
 
 @media screen and (min-width: 1080px) {
 
@@ -167,7 +168,7 @@ header {
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
-    .home-banner h1, .story div, .interests div {
+    .home-banner div, .story div, .interests div {
         padding: 0;
     }
 
@@ -189,7 +190,7 @@ header {
         object-fit: cover;
     }
 
-    .home-banner h1, .interests div {
+    .home-banner div, .interests div {
         padding: 0 0 0 3rem;
     }
 
@@ -215,7 +216,7 @@ header {
         grid-row: 1;
     }
 
-    .home-banner h1 {
+    .home-banner div {
         grid-column: 2;
         grid-row: 1;
         font-size: 4rem;
@@ -230,6 +231,13 @@ header {
         grid-column: 2;
         grid-row: 1;
     }
+
+    /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
+
+    footer {
+        background-color: #13131b;
+        padding: 3rem 6rem;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -242,7 +250,7 @@ header {
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
-    .home-banner h1, .interests div {
+    .home-banner div, .interests div {
         padding: 0 12rem 3rem 3rem;
     }
 
@@ -265,13 +273,26 @@ header {
     .interests img, .story img {
         height: 34rem;
     }
+
+    /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
+
+    footer {
+        background-color: #13131b;
+        padding: 3rem 12rem;
+    }
 }
 
 @media screen and (min-width: 1920px) {
     .home-banner h1 {
-        font-size: 5.5rem;
+        font-size: 4.5rem;
     }
 }
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
 
 
 
