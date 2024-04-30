@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Kanit", sans-serif;
+    margin: 0;
 }
 
 p {
@@ -36,7 +37,7 @@ header {
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
 .home-banner h1, .objectives div, .story div, .interests div {
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
 .home-banner img, .objectives img, .story img, .interests img {
@@ -48,13 +49,63 @@ header {
     background-color: #13131b;
 }
 
+.objectives {
+    background-image: linear-gradient(135deg, #9945ff, #14f195);
+    color: #000;
+}
+
+.objectives h2 {
+    color: #13131b;
+}
+
 .home-banner h1 {
-    font-size: 3rem;
-    height: auto;
-    background: -webkit-linear-gradient(#9945ff, #14f195);
+    font-size: 3.5rem;
+    /*
+     height: auto;
+     background-image: linear-gradient(135deg, var(--c1, #9945ff), var(--c2, #14f195) 51%, var(--c1, #9945ff)) var(--x, 0)/ 200%;
+     transition: 0.5s;
+     background-size: 100%;
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     -webkit-text-fill-color: transparent; 
+     -moz-text-fill-color: transparent; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+    background: linear-gradient(90deg, #9945ff, #14f195);
+    background-size: 200% 200%;
+    animation: rainbow 5s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgb(255, 255, 255);
+    transition: color .2s ease-in-out;
+ }
+ 
+ .home-banner h1:hover{
+     /* --x: 100%;
+     --c1: #14f195;
+     --c2: #9945ff; */
+     color:rgba(255, 255, 255, 0);
+ }
+ 
+ @keyframes rainbow { 
+     0%{background-position:left}
+     50%{background-position:right}
+     100%{background-position:left}
+ }
+
+/* .home-banner h1 {
+   font-size: 3rem;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #9945ff, #14f195); 
+    background-color: #fff;
+    background-image: linear-gradient(90deg, #9945ff, #14f195);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+} */
 
 .objectives h2, .story h2, .interests h2 {
     font-size: 2rem;
@@ -76,8 +127,12 @@ header {
 
    /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
-        .home-banner h1, .objectives div, .story div, .interests div {
-            padding: 0 3rem;
+        .home-banner h1, .story div, .interests div {
+            padding: 0 0 3rem 0;
+        }
+
+        .home-banner, .story, .interests, .objectives {
+            padding: 3rem;
         }
 
         .home-banner h1 {
@@ -97,26 +152,40 @@ header {
         padding: 1rem 6rem 0 6rem;
     }
 
-    .custom-logo {
-        height: 3rem;
-    }
-
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
+    .home-banner h1, .story div, .interests div {
+        padding: 0;
+    }
+
+    .home-banner, .story, .interests, .objectives  {
+        padding: 3rem 6rem;
+    }
+
+    .home-banner, .interests, .objectives, .story {
+        height: 30rem;
+    }
+
+    .home-banner img {
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    .interests img, .story img {
+        height: 24rem;
+        object-fit: cover;
+    }
+
     .home-banner h1, .interests div {
-        padding: 0 6rem 0 3rem;
+        padding: 0 0 0 3rem;
     }
 
     .objectives div {
-        padding: 0 6rem;
+        padding: 3rem 0;
     }
 
     .story div {
-        padding: 0 3rem 0 6rem
-    }
-
-    .home-banner h1 {
-        font-size: 3.5rem;
+        padding: 0 6rem 0 0;
     }
 
     .objectives h2, .story h2, .interests h2 {
@@ -136,6 +205,7 @@ header {
     .home-banner h1 {
         grid-column: 2;
         grid-row: 1;
+        font-size: 4rem;
     }
 
     .interests img {
@@ -158,30 +228,34 @@ header {
     }
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
-    
+
     .home-banner h1, .interests div {
-        padding: 0 12rem 0 3rem;
+        padding: 0 12rem 3rem 3rem;
     }
-    
+
     .objectives div {
-        padding: 0 12rem;
+        padding: 3rem 12rem;
     }
-    
+
     .story div {
-        padding: 0 3rem 0 12rem
-    }
-    
-    .home-banner h1 {
-        font-size: 4rem;
+        padding: 0 3rem 3rem 12rem
     }
     
     .objectives h2, .story h2, .interests h2 {
         font-size: 3rem;
     }
+
+    .interests, .story {
+        height: 40rem;
+    }
+
+    .interests img, .story img {
+        height: 34rem;
+    }
 }
 
 @media screen and (min-width: 1920px) {
     .home-banner h1 {
-        font-size: 7rem;
+        font-size: 5.5rem;
     }
 }
