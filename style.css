@@ -42,6 +42,7 @@ header {
 
 .home-banner img, .objectives img, .story img, .interests img {
     width: 100%;
+
     display: block;
 }
 
@@ -259,3 +260,11 @@ header {
         font-size: 5.5rem;
     }
 }
+
+}
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+

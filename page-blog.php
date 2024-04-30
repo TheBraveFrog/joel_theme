@@ -4,7 +4,7 @@
  *
  * @package joel_portfolio
  */
-
+$title = "Blog";
 get_header();
 ?>
 
