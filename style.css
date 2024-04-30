@@ -32,3 +32,8 @@ img {
 .custom-logo {
     width: 100%;
 }
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
