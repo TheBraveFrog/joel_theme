@@ -28,7 +28,7 @@
 </section>
 <section class="objectives">
     <div>
-        <h2>Career Objectives/ Values</h2>
+        <h2>Career Objectives - Values</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eos praesentium. Culpa beatae est sunt cupiditate, aspernatur quasi quaerat quas vitae, cumque totam unde facilis eum laborum, quibusdam accusantium iste. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores error magnam ab doloribus minima, adipisci exercitationem, harum cupiditate natus modi amet atque? Quos, soluta debitis. Perferendis possimus at inventore incidunt.</p>
     </div>
 </section>
