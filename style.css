@@ -241,17 +241,23 @@ header .button-space{
 /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
 article {
-    align-items: center;
-    display: flex;
+    padding: 1rem;
 }
 
-.conetent {
-    padding-left: 2rem;
+.attachment-medium {
+    width: 18rem !important;
+}
+
+article h2 {
+    font-size: 2rem;
+}
+
+article a {
+    color: white;
 }
 
 .content p {
-    max-width: 70%;
-
+    max-width: 80%;
 }
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
