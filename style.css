@@ -125,28 +125,6 @@ header .button-space{
     width: 2.5rem;
 }
 
-.menu-container {
-    display: flex;
-    align-items: center;
-}
-
-.menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.menu li {
-    margin-right: 10px;
-}
-
-.menu li:last-child {
-    margin-right: 0;
-}
-
-
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
 .home-banner div, .objectives div, .story div, .interests div {
@@ -197,6 +175,28 @@ header .button-space{
     font-size: 2rem;
 }
 
+/* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
+
+article {
+    padding: 1rem;
+}
+
+.attachment-medium {
+    width: 18rem !important;
+}
+
+article h2 {
+    font-size: 2rem;
+}
+
+article a {
+    color: white;
+}
+
+.content p {
+    max-width: 80%;
+}
+
 /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
 .single-post-thumbnail img  {
@@ -237,27 +237,6 @@ header .button-space{
     padding: 1rem;
     display: grid;
     gap: 1rem;
-
-/* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
-
-article {
-    padding: 1rem;
-}
-
-.attachment-medium {
-    width: 18rem !important;
-}
-
-article h2 {
-    font-size: 2rem;
-}
-
-article a {
-    color: white;
-}
-
-.content p {
-    max-width: 80%;
 }
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
