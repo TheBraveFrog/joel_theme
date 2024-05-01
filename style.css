@@ -252,8 +252,26 @@ header .button-space{
     padding: 1rem;
 }
 
+.single-container article {
+    padding: 0;
+}
+
 .single-container h2 {
     font-size: 2.5rem;
+}
+
+.single-container p:nth-child(3), .single-container p a {
+    font-size: 1rem;
+    font-style: italic;
+    color: #d3d3d3;
+    margin-top: .25rem;
+}
+
+.single-post-content p a {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 0rem;
+    font-style: unset;
 }
 
 .post-meta p {
@@ -390,12 +408,6 @@ footer li a:hover {
         }
 
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
-
-        .post-thumbnail img  {
-            width: 18rem;
-            height: 18rem;
-            object-fit: cover;
-        }
 
         .single-container {
             padding: 1rem 3rem;
@@ -548,12 +560,6 @@ footer li a:hover {
 
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
-    .post-thumbnail img  {
-        width: 18rem;
-        height: 18rem;
-        object-fit: cover;
-    }
-
     .single-container {
         padding: 1rem 6rem;
     }
@@ -620,12 +626,6 @@ footer li a:hover {
 
 /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
-    .post-thumbnail img  {
-        width: 18rem;
-        height: 18rem;
-        object-fit: cover;
-    }
-
     .single-container {
         padding: 1rem 12rem;
     }
@@ -652,7 +652,30 @@ footer li a:hover {
 }
 
 @media screen and (min-width: 1920px) {
+    /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+
     .home-banner h1 {
         font-size: 4.5rem;
     }
+
+
+    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+    .post-meta h2 {
+        font-size: 4rem;
+    }
+
+    .single-post-thumbnail img  {
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+    }
 }
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+}
+
