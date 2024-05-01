@@ -23,14 +23,14 @@ if ($query->have_posts()):
     while ($query->have_posts()):
         $query->the_post();
         ?>
-        <article <?php the_permalink() ?> class="blog-page">
-            <div class="all-blog-info">
-                <div>
-                    <?php if (has_post_thumbnail()): ?>
-                        <div class="post-thumbnail">
-                            <?php the_post_thumbnail('medium'); ?>
-                        </div>
-                    <?php endif; ?>
+        <article class="blog-page">
+            <div class="all-blog-info" data-post-id="<?php the_ID(); ?>">
+                <?php if (has_post_thumbnail()): ?>
+                    <div class="post-thumbnail">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </div>
+                <?php endif; ?>
+                <div class="blog-content">
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php
                     $categories = get_the_category();
@@ -42,11 +42,9 @@ if ($query->have_posts()):
                         echo '</p>';
                     }
                     ?>
-                </div>
-                <div class="all-content">
                     <div class="content">
                         <div class="post-content">
-                            <?php echo wp_trim_words(get_the_excerpt(), 40); ?>
+                            <p><?php echo wp_trim_words(get_the_excerpt(), 40); ?></p>
                         </div>
                     </div>
                     <div class="read-more">
@@ -55,6 +53,25 @@ if ($query->have_posts()):
                 </div>
             </div>
         </article>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Get all blog divs
+                const blogDivs = document.querySelectorAll(".all-blog-info");
+                
+                // Add click event listener to each blog div
+                blogDivs.forEach(function(blogDiv) {
+                    blogDiv.addEventListener("click", function() {
+
+                        const postId = blogDiv.dataset.postId;
+                        
+                        const url = "<?php echo "?p="; ?>" + postId;
+                        
+                        window.location.href = url;
+                    });
+                });
+            });
+        </script>
         <?php
     endwhile;
 
@@ -64,8 +81,8 @@ if ($query->have_posts()):
         array(
             'total' => $query->max_num_pages,
             'current' => $paged,
-            'prev_text' => __('« Previous'),
-            'next_text' => __('Next »'),
+            'prev_text' => __('Prev'),
+            'next_text' => __('Next'),
         )
     );
     echo '</div>';

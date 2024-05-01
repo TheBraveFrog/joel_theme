@@ -187,14 +187,16 @@ header .button-space{
 
 .all-blog-info {
     position: relative;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     background-color: #13131b;
     overflow: hidden;
-    transition: box-shadow 0.5s;
+    transition: 0.3s ease;
+    border-radius: 5px;
 }
 
 .all-blog-info:hover {
-    box-shadow: 10px 8px 10px 5px rgba(153, 69, 255, 0.3);
+    outline: 2px solid #14f195;
+    cursor: pointer;
 }
 
 .all-blog-info:before {
@@ -204,40 +206,86 @@ header .button-space{
     right: 0;
     width: 5rem;
     height: 5rem;
-    background: linear-gradient(44deg, transparent 50%, #9945ff 50%, #14f195);
+    /* background: linear-gradient(44deg, transparent 50%, #9945ff 50%, #14f195); */
 }
 
-
 .attachment-medium {
-    border-radius: 20%;
-    height: 18rem !important;
+    height: 16rem !important;
+    width: 16rem !important;
     object-fit: cover;
-    width: 18rem !important;
+    border-radius: 5px;
 }
 
 .blog-page h2 {
+    margin: 1rem 0 .25rem 0;
+}
+
+.blog-page h2 a {
     font-size: 2rem;
 }
 
 .blog-page a {
     color: white;
+    text-decoration: none;
 }
 
+.blog-content p:nth-child(2), p a {
+    font-size: 1rem !important;
+    font-style: italic;
+    color: #d3d3d3;
+    margin: 0;
+}
 
-.content p {
-    max-width: 80%;
+.post-content p {
+    margin-top: 1rem;
 }
 
 .read-more {
     padding-top: 1rem;
 }
 
-.pagination {
-    padding: 1rem;
+.read-more a {
+    background-color: #000;
+    border-radius: 5px;
+    padding: .2rem .5rem;
 }
 
-.pagination a {
+.read-more a:hover {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+.pagination {
+    padding: 1rem 1rem 2rem 1rem;
+    text-align: center;
+}
+
+.pagination .page-numbers {
     color: #fff;
+    text-decoration: none;
+    background-color: #13131b;
+    font-size: 1.1rem;
+    padding: .25rem .75rem .15rem .75rem;
+    border-radius: 5px;
+    margin: 0 .1rem;
+}
+
+.pagination a.page-numbers {
+    font-size: 1.25rem;
+}
+
+.pagination a.page-numbers:hover {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+.pagination .current{
+    padding: .4rem .75rem .6rem .75rem;
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
 }
 
 .screen-reader-text {
@@ -256,8 +304,26 @@ header .button-space{
     padding: 1rem;
 }
 
+.single-container article {
+    padding: 0;
+}
+
 .single-container h2 {
     font-size: 2.5rem;
+}
+
+.single-container p:nth-child(3), .single-container p a {
+    font-size: 1rem;
+    font-style: italic;
+    color: #d3d3d3;
+    margin-top: .25rem;
+}
+
+.single-post-content p a {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-top: 0rem;
+    font-style: unset;
 }
 
 .post-meta p {
@@ -410,13 +476,11 @@ footer li a:hover {
             height: 10rem;
         }
 
-    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
-
-        .post-thumbnail img  {
-            width: 18rem;
-            height: 18rem;
-            object-fit: cover;
+        .blog-page {
+            padding: 1rem 3rem;
         }
+
+    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
         .single-container {
             padding: 1rem 3rem;
@@ -550,30 +614,34 @@ footer li a:hover {
         grid-row: 1;
     }
 
-     /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
+    /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
-     .all-blog-info {
+    .blog-page {
+        padding: 1rem 6rem;
+    }
+
+    .all-blog-info {
         display: flex;
-     }
+        padding: 1rem;
+    }
 
-     .all-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-left: 3rem;
-     }
+    .all-blog-info h2 {
+        margin-top: 0;
+    }
 
-     .post-content {
-        width: 60%;
-     }
+    .blog-content {
+        margin-left: 2rem;
+        width: 100%;
+    }
+
+    .read-more {
+        text-align: right;
+        position: absolute; 
+        bottom: 1.5rem;
+        right: 1rem;
+    }
 
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
-
-    .post-thumbnail img  {
-        width: 18rem;
-        height: 18rem;
-        object-fit: cover;
-    }
 
     .single-container {
         padding: 1rem 6rem;
@@ -639,13 +707,13 @@ footer li a:hover {
         height: 34rem;
     }
 
-/* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+/* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
-    .post-thumbnail img  {
-        width: 18rem;
-        height: 18rem;
-        object-fit: cover;
+    .blog-page {
+        padding: 1rem 12rem;
     }
+
+/* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
     .single-container {
         padding: 1rem 12rem;
@@ -673,7 +741,28 @@ footer li a:hover {
 }
 
 @media screen and (min-width: 1920px) {
+    /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
+
     .home-banner h1 {
         font-size: 4.5rem;
     }
+
+
+    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+    .post-meta h2 {
+        font-size: 4rem;
+    }
+
+    .single-post-thumbnail img  {
+        width: 30rem;
+        height: 30rem;
+        object-fit: cover;
+    }
 }
+
+/* gallery */
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
