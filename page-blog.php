@@ -8,7 +8,6 @@ $title = "Blog";
 get_header();
 ?>
 
-<div class="container">
 
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -20,16 +19,17 @@ get_header();
 
     $query = new WP_Query($args);
 
-    if ($query->have_posts()) :
-        while ($query->have_posts()) : $query->the_post();
+    if ($query->have_posts()):
+        while ($query->have_posts()):
+            $query->the_post();
             ?>
             <article>
                 <div>
-                    <?php if (has_post_thumbnail()) : ?>
+                    <?php if (has_post_thumbnail()): ?>
                         <div class="post-thumbnail">
                             <?php the_post_thumbnail('medium'); ?>
                         </div>
-                        <?php endif; ?>
+                    <?php endif; ?>
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php
                     $categories = get_the_category();
@@ -41,34 +41,33 @@ get_header();
                         echo '</p>';
                     }
                     ?>
-                    </div>
+                </div>
                 <div class="content">
                     <div class="post-content">
-                        <?php echo wp_trim_words(get_the_excerpt(), 20);?>
-                    </div>
-                    </div>
-                    <div class="read-more">
-                        <a href="<?php the_permalink(); ?>">Read more</a>
+                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
                     </div>
                 </div>
+                <div class="read-more">
+                    <a href="<?php the_permalink(); ?>">Read more</a>
+                </div>
             </article>
-            <?php
+        <?php
         endwhile;
 
         // Pagination
         echo '<div class="pagination">';
-        echo paginate_links(array(
-            'total' => $query->max_num_pages,
-            'current' => $paged,
-            'prev_text' => __('« Previous'),
-            'next_text' => __('Next »'),
-        ));
+        echo paginate_links(
+            array(
+                'total' => $query->max_num_pages,
+                'current' => $paged,
+                'prev_text' => __('« Previous'),
+                'next_text' => __('Next »'),
+            )
+        );
         echo '</div>';
-    else :
+    else:
         echo 'No posts found.';
     endif;
     ?>
-
-</div>
 
 <?php get_footer(); ?>
