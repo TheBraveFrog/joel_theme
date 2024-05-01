@@ -15,7 +15,7 @@ get_header();
     <?php
     $args = array(
         'post_type' => 'post',
-        'cat' => get_query_var('cat'), // Get the current category ID
+        'cat' => get_query_var('cat'), 
         'posts_per_page' => 5,
         'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1
     );
@@ -67,11 +67,8 @@ get_header();
             'next_text' => __('Next', 'joel_portfolio'),
         ));
     else :
-        // If no posts are found, output a message
         echo 'No posts found.';
     endif;
-
-    // Restore original post data
     wp_reset_postdata();
     ?>
 

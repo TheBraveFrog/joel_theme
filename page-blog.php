@@ -23,7 +23,7 @@ if ($query->have_posts()):
     while ($query->have_posts()):
         $query->the_post();
         ?>
-        <article class="blog-page">
+        <article <?php the_permalink() ?> class="blog-page">
             <div class="all-blog-info">
                 <div>
                     <?php if (has_post_thumbnail()): ?>
