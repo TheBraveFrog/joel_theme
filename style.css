@@ -183,7 +183,11 @@ header .button-space{
 /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
 article {
-    padding: 2rem;
+    padding: 1rem;
+}
+
+.attachment-medium {
+    width: 18rem !important;
 }
 
 article h2 {
@@ -191,11 +195,11 @@ article h2 {
 }
 
 article a {
-    text-decoration: none;
+    color: white;
 }
 
 .content p {
-    max-width: 90%;
+    max-width: 80%;
 }
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/

@@ -10,7 +10,7 @@ get_header();
 
 <div class="container">
 
-    <h2><?php single_cat_title(); ?></h2>
+    <h1><?php single_cat_title(); ?></h1>
 
     <?php
     $args = array(
@@ -26,17 +26,17 @@ get_header();
         while ($query->have_posts()) : $query->the_post();
             ?>
             <article>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php if (has_post_thumbnail()) : ?>
-                <div class="post-thumbnail">
-                    <?php the_post_thumbnail('large'); ?>
-                </div>
+                    <div class="post-thumbnail">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </div>
+                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                 <?php endif; ?>
                 <div class="post-meta">
                     <p>Published on <?php the_date(); ?></p>
                 </div>
                 <div class="post-content">
-                    <?php the_excerpt(); ?>
+                    <?php echo wp_trim_words(get_the_excerpt(), 20);?>
                 </div>
                 <div class="read-more">
                     <a href="<?php the_permalink(); ?>">Read more</a>
