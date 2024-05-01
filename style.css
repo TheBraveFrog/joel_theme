@@ -288,6 +288,10 @@ header .button-space{
     background-size: 200% 200%;
 }
 
+.screen-reader-text {
+    display: none;
+}
+
 /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
 .single-post-thumbnail img  {
@@ -327,6 +331,23 @@ header .button-space{
     font-style: italic;
     color: #d3d3d3;
     margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img img {
+    width: 18rem;
 }
 
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
