@@ -41,6 +41,7 @@
                 </svg>
             </div>
             <div class="menu-container">
+
                 <?php  wp_nav_menu( array( 'theme_location' => 'header' ) );
                     wp_nav_menu(
                         array(
@@ -49,6 +50,15 @@
                         'fallback_cb' => false
                         )
                     ); ?>
+
+                    <svg class="nav-btn" fill="none" viewBox="0 0 24 24">
+                                    <g stroke="#ffff" stroke-linecap="round" stroke-width="2">
+                                        <path d="m4 18h16" />
+                                        <path d="m4 12h16" />
+                                        <path d="m4 6h16" />
+                                    </g>
+                                </svg>
+
             </div>
         </div>
     </header>

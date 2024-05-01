@@ -24,13 +24,14 @@ get_header();
         while ($query->have_posts()) : $query->the_post();
             ?>
             <article>
-                <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                <?php if (has_post_thumbnail()) : ?>
-                <div class="post-thumbnail">
-                    <?php the_post_thumbnail('small'); ?>
-                </div>
-                <?php endif; ?>
-                <?php
+                <div>
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                    <?php if (has_post_thumbnail()) : ?>
+                    <div class="post-thumbnail">
+                        <?php the_post_thumbnail('medium'); ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php
                     $categories = get_the_category();
                     if ($categories) {
                         echo '<p>Categories: ';
@@ -39,12 +40,15 @@ get_header();
                         }
                         echo '</p>';
                     }
-                ?>
-                <div class="post-content">
-                    <?php the_excerpt(); ?>
-                </div>
-                <div class="read-more">
-                    <a href="<?php the_permalink(); ?>">Read more</a>
+                    ?>
+                    </div>
+                <div class="content">
+                    <div class="post-content">
+                        <?php the_excerpt(); ?>
+                    </div>
+                    <div class="read-more">
+                        <a href="<?php the_permalink(); ?>">Read more</a>
+                    </div>
                 </div>
             </article>
             <?php
@@ -60,7 +64,6 @@ get_header();
         ));
         echo '</div>';
     else :
-        // If no posts are found, output a message
         echo 'No posts found.';
     endif;
     ?>
