@@ -25,12 +25,12 @@ get_header();
             ?>
             <article>
                 <div>
-                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php if (has_post_thumbnail()) : ?>
-                    <div class="post-thumbnail">
-                        <?php the_post_thumbnail('medium'); ?>
-                    </div>
-                    <?php endif; ?>
+                        <div class="post-thumbnail">
+                            <?php the_post_thumbnail('medium'); ?>
+                        </div>
+                        <?php endif; ?>
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <?php
                     $categories = get_the_category();
                     if ($categories) {
@@ -44,7 +44,8 @@ get_header();
                     </div>
                 <div class="content">
                     <div class="post-content">
-                        <?php the_excerpt(); ?>
+                        <?php echo wp_trim_words(get_the_excerpt(), 20);?>
+                    </div>
                     </div>
                     <div class="read-more">
                         <a href="<?php the_permalink(); ?>">Read more</a>
