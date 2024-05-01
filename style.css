@@ -27,8 +27,33 @@ p, li, a {
 /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
 header {
-    padding: 1rem 1rem 0 1rem;
     position: relative;
+    height: 4.5rem;
+}
+
+header .nav-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100%);
+    height: 4.5rem;
+}
+
+header .logo{
+    grid-column: 1;
+    grid-row: 1;
+    padding: 1rem 0 .8rem 1rem;
+}
+
+header .button-space{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 1rem 1rem .8rem 0;
+    text-align: right;
+}
+
+.menu-container {
+    grid-column: 1 / span 2;
+    grid-row: 2;
 }
 
 .custom-logo {
@@ -38,36 +63,49 @@ header {
 
 .menu-main-nav-container {
     transform-origin: top;
-    transform: scaleX(0);
+    transform: scaleY(0);
     transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
+    padding: 1rem;
 }
 
 .menu-expanded {
-    transform: scaleX(100%);
+    transform: scaleY(100%);
 }
 
 .menu-main-nav-container ul.menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
 }
 
 .menu-main-nav-container ul.menu li {
-    margin: 0 10px; 
+    margin: 0; 
+    padding: 0;
 }
 
 .menu-main-nav-container ul.menu li a {
+    margin-top: .5rem;
     display: block;
-    padding: 10px 15px;
     text-decoration: none;
+    transition: 0.3s ease;
     color: #ffffff;
+}
+
+.menu-main-nav-container ul.menu li a:hover {
+    color: #13131b;
+}
+
+.menu-main-nav-container ul.menu li a:last-child {
+    margin-bottom: .5rem;
 }
 
 .nav-btn {
     cursor: pointer;
-    width: 4rem;
+    width: 2.5rem;
 }
 
 .menu-container {
@@ -95,7 +133,7 @@ header {
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
 
 .home-banner div, .objectives div, .story div, .interests div {
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
 
 .home-banner img, .objectives img, .story img, .interests img {
@@ -218,11 +256,32 @@ footer li a:hover {
     /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
         header {
-            padding: 1rem 3rem 0 3rem;
+            padding: 0;
         }
 
-        .custom-logo {
-            height: 3rem;
+        .menu-main-nav-container {
+            transform: scaleX(0);
+        }
+        
+        .menu-expanded {
+            transform: scaleX(100%);
+        }
+        
+        .menu-main-nav-container ul.menu {
+            display: flex;
+            padding: 0 3rem;
+        }
+
+        .menu-main-nav-container ul.menu li {
+            padding: 0 3rem;
+        }
+
+        header .logo{
+            padding: 1rem 0 .8rem 3rem;
+        }
+        
+        header .button-space{
+            padding: 1rem 3rem .8rem 0;
         }
 
    /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
@@ -276,7 +335,19 @@ footer li a:hover {
 /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
     header {
-        padding: 1rem 6rem 0 6rem;
+        padding: 0;
+    }
+
+    header .logo{
+        padding: 1rem 0 .8rem 6rem;
+    }
+    
+    header .button-space{
+        padding: 1rem 6rem .8rem 0;
+    }
+
+    .menu-main-nav-container ul.menu {
+        padding: 0 6rem;
     }
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
@@ -358,7 +429,19 @@ footer li a:hover {
 /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
     header {
-        padding: 1rem 12rem 0 12rem;
+        padding: 0;
+    }
+
+    header .logo{
+        padding: 1rem 0 .8rem 12rem;
+    }
+    
+    header .button-space{
+        padding: 1rem 12rem .8rem 0;
+    }
+
+    .menu-main-nav-container ul.menu {
+        padding: 0 12rem;
     }
 
 /* --------------------------------------------------------------------- HOME ---------------------------------------------------------------------*/
