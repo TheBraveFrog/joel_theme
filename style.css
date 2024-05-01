@@ -175,6 +175,47 @@ header .button-space{
     font-size: 2rem;
 }
 
+/* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+.single-post-thumbnail img  {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+}
+
+.single-container {
+    padding: 1rem;
+}
+
+.single-container h2 {
+    font-size: 2.5rem;
+}
+
+.post-meta p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #d3d3d3;
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
+
+.gallery-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr) !important;
+}
+
+.envira-gallery-public img {
+    width: 100%;
+    height: 20rem;
+    display: block;
+    object-fit: cover;
+}
+
+.envira-gallery-public {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+}
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
@@ -223,26 +264,6 @@ footer li a:hover {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-/* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
-.gallery-grid-wrapper {
-    grid-template-columns: repeat(1, 1fr) !important;
-}
-
-.envira-gallery-public img {
-    width: 100%;
-    height: 20rem;
-    display: block;
-    object-fit: cover;
-}
-
-.envira-gallery-public {
-    padding: 1rem;
-    display: grid;
-    gap: 1rem;
-}
-
 
 
 @media screen and (min-width: 720px) {
@@ -294,6 +315,18 @@ footer li a:hover {
 
         .objectives h2, .story h2, .interests h2 {
             font-size: 2.5rem;
+        }
+
+    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+        .post-thumbnail img  {
+            width: 18rem;
+            height: 18rem;
+            object-fit: cover;
+        }
+
+        .single-container {
+            padding: 1rem 3rem;
         }
 
     /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
@@ -420,7 +453,19 @@ footer li a:hover {
         grid-row: 1;
     }
 
-     /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
+    /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+    .post-thumbnail img  {
+        width: 18rem;
+        height: 18rem;
+        object-fit: cover;
+    }
+
+    .single-container {
+        padding: 1rem 6rem;
+    }
+
+    /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
     .envira-gallery-public img {
         height: 35rem;
@@ -480,6 +525,18 @@ footer li a:hover {
         height: 34rem;
     }
 
+/* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
+
+    .post-thumbnail img  {
+        width: 18rem;
+        height: 18rem;
+        object-fit: cover;
+    }
+
+    .single-container {
+        padding: 1rem 12rem;
+    }
+
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
     .envira-gallery-public {
@@ -511,8 +568,3 @@ footer li a:hover {
 .gallery-grid-wrapper {
     grid-template-columns: repeat(1, 1fr) !important;
   }
-
-
-
-
-
