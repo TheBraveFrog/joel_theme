@@ -54,6 +54,8 @@ header .button-space{
 .menu-container {
     grid-column: 1 / span 2;
     grid-row: 2;
+    position: relative;
+    z-index: 1000;
 }
 
 .custom-logo {
@@ -80,6 +82,7 @@ header .button-space{
     margin: 0;
     padding: 0;
     justify-content: center;
+    z-index: 1000;
 }
 
 .menu-main-nav-container ul.menu li {
@@ -177,24 +180,64 @@ header .button-space{
 
 /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
-article {
+.blog-page {
+    background-color: black;
     padding: 1rem;
 }
 
+.all-blog-info {
+    position: relative;
+    padding: 1rem;
+    background-color: #13131b;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+}
+
+.all-blog-info:hover {
+    box-shadow: 10px 8px 10px 5px rgba(153, 69, 255, 0.3);
+}
+
+.all-blog-info:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(44deg, transparent 50%, #9945ff 50%, #14f195);
+}
+
+
 .attachment-medium {
+    border-radius: 20%;
+    height: 18rem !important;
+    object-fit: cover;
     width: 18rem !important;
 }
 
-article h2 {
+.blog-page h2 {
     font-size: 2rem;
 }
 
-article a {
+.blog-page a {
     color: white;
 }
 
+
 .content p {
     max-width: 80%;
+}
+
+.read-more {
+    padding-top: 1rem;
+}
+
+.pagination {
+    padding: 1rem;
+}
+
+.pagination a {
+    color: #fff;
 }
 
 /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
@@ -313,7 +356,7 @@ footer li a:hover {
             padding: 0 3rem;
         }
 
-        header .logo{
+        header .logo {
             padding: 1rem 0 .8rem 3rem;
         }
         
@@ -339,6 +382,13 @@ footer li a:hover {
             font-size: 2.5rem;
         }
 
+    /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
+
+        .all-blog-info:before {
+            width: 10rem;
+            height: 10rem;
+        }
+
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
         .post-thumbnail img  {
@@ -360,6 +410,10 @@ footer li a:hover {
         .envira-gallery-public img {
             height: 20rem;
         }
+
+        .gallery-grid-wrapper {
+            grid-template-columns: repeat(1, 1fr) !important;
+          }
 
      /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
@@ -397,11 +451,11 @@ footer li a:hover {
         padding: 0;
     }
 
-    header .logo{
+    header .logo {
         padding: 1rem 0 .8rem 6rem;
     }
     
-    header .button-space{
+    header .button-space {
         padding: 1rem 6rem .8rem 0;
     }
 
@@ -470,10 +524,27 @@ footer li a:hover {
         grid-row: 1;
     }
 
-    .interests div{
+    .interests div {
         grid-column: 2;
         grid-row: 1;
     }
+
+     /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
+
+     .all-blog-info {
+        display: flex;
+     }
+
+     .all-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 3rem;
+     }
+
+     .post-content {
+        width: 60%;
+     }
 
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
@@ -585,8 +656,3 @@ footer li a:hover {
         font-size: 4.5rem;
     }
 }
-
-/* gallery */
-.gallery-grid-wrapper {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
