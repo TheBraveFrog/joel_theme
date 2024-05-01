@@ -329,6 +329,23 @@ header .button-space{
     margin-bottom: 0;
 }
 
+/* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img img {
+    width: 18rem;
+}
+
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
 .gallery-grid-wrapper {
