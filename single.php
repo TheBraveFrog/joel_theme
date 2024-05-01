@@ -8,16 +8,16 @@
 get_header();
 ?>
 
-<div class="container">
+<div class="single-container">
 
     <article>
-        <h2><?php the_title(); ?></h2>
         <?php if (has_post_thumbnail()) : ?>
-                <div class="post-thumbnail">
+                <div class="single-post-thumbnail">
                     <?php the_post_thumbnail('large'); ?>
                 </div>
                 <?php endif; ?>
         <div class="post-meta">
+            <h2><?php the_title(); ?></h2>
             <p>Published on <?php the_date(); ?></p>
         </div>
             <?php
@@ -30,7 +30,7 @@ get_header();
                 echo '</p>';
             }
             ?>
-        <div class="post-content">
+        <div class="single-post-content"> 
             <?php the_content(); ?>
         </div>
     </article>
