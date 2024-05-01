@@ -237,6 +237,7 @@ header .button-space{
     padding: 1rem;
     display: grid;
     gap: 1rem;
+}
 
 /* --------------------------------------------------------------------- BLOG ---------------------------------------------------------------------*/
 
@@ -334,7 +335,7 @@ footer li a:hover {
             padding: 0 3rem;
         }
 
-        header .logo{
+        header .logo {
             padding: 1rem 0 .8rem 3rem;
         }
         
@@ -382,6 +383,10 @@ footer li a:hover {
             height: 20rem;
         }
 
+        .gallery-grid-wrapper {
+            grid-template-columns: repeat(1, 1fr) !important;
+          }
+
      /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
     footer {
@@ -418,11 +423,11 @@ footer li a:hover {
         padding: 0;
     }
 
-    header .logo{
+    header .logo {
         padding: 1rem 0 .8rem 6rem;
     }
     
-    header .button-space{
+    header .button-space {
         padding: 1rem 6rem .8rem 0;
     }
 
@@ -491,7 +496,7 @@ footer li a:hover {
         grid-row: 1;
     }
 
-    .interests div{
+    .interests div {
         grid-column: 2;
         grid-row: 1;
     }
@@ -606,8 +611,3 @@ footer li a:hover {
         font-size: 4.5rem;
     }
 }
-
-/* gallery */
-.gallery-grid-wrapper {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
