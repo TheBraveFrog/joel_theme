@@ -96,24 +96,7 @@ header .button-space{
     text-decoration: none;
     transition: 0.3s ease;
     color: #ffffff;
-    animation: ripple 0.6s linear infinite;
 }
-
-@keyframes ripple {
-    0% {
-      box-shadow: 0 0 0 0 rgba(#fff, 0.1),
-                  0 0 0 20px rgba(#fff, 0.1),
-                  0 0 0 40px rgba(#fff, 0.1),
-                  0 0 0 60px rgba(#fff, 0.1)
-    }
-    100% {
-      box-shadow: 0 0 0 20px rgba(#fff, 0.1),
-                  0 0 0 40px rgba(#fff, 0.1),
-                  0 0 0 60px rgba(#fff, 0.1),
-                  0 0 0 80px rgba(#fff, 0)
-    }
-}
-
 
 .menu-main-nav-container ul.menu li a:hover {
     color: #13131b;
@@ -195,7 +178,7 @@ header .button-space{
 }
 
 .all-blog-info:hover {
-    outline: 2px solid #14f195;
+    outline: 2px solid #50A3C5;
     cursor: pointer;
 }
 
@@ -346,6 +329,90 @@ header .button-space{
     width: 18rem;
 }
 
+/* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
+
+.resume-page h2:not(.pro-title h2), .resume-page h3:not(.pro-title h3) {
+    /* color: #14f195; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #9945ff, #14f195);
+    background-size: 150% 150%;
+    animation: rainbow 5s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip:text;
+    color:rgb(255, 255, 255);
+    transition: color .2s ease-in-out;
+}
+
+.contact, .introduction, .skills, .work-history, .certifications, .education {
+    padding: 1rem;
+    max-width: 67.5rem;
+    margin: 0 auto;
+}
+
+.pro-title {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.pro-title h1 {
+    font-size: 3rem;
+}
+
+.pro-title h2 {
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+.introduction {
+    padding-bottom: 2rem;
+}
+
+.introduction p {
+    margin: 0;
+}
+
+.year {
+    font-style: italic;
+}
+
+.contact, .skills, .certifications {
+    padding: 1rem 1rem 2rem 1rem;
+    background-color: #13131b;
+}
+
+.contact h2, .skills h2, .work-history h2, .certifications h2, .education h2 {
+    font-size: 1.5rem;
+}
+
+.contact h3, .work-history h3, .education h3 {
+    font-size: 1.25rem;
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+.contact p {
+    font-size: 1.25rem;
+    margin: .25rem 0;
+    font-weight: normal;
+}
+
+.contact svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.work-history div, .education div{
+    padding: 1rem 0;
+}
+
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
 .gallery-grid-wrapper {
@@ -481,6 +548,49 @@ footer li a:hover {
         .single-container {
             padding: 1rem 3rem;
         }
+
+    /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+        }
+
+        .skills div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .work-history div, .certifications div, .education div {
+            display: grid;
+            grid-template-columns: 85% 15%;
+        }
+
+        .work-history h3, 
+        .work-history p, 
+        .work-history ul, 
+        .certifications h2, 
+        .certifications p, 
+        .education h3, 
+        .education p  {
+            grid-column: 1;
+        }
+
+        .work-history .year, .certifications .year, .education .year {
+            grid-column: 2;
+            grid-row: 1 / span 3;
+            margin-left: 1rem;
+        }
+
+        .contact h2, .skills h2, .work-history h2, .certifications h2, .education h2 {
+            font-size: 2rem;
+        }
+        
+        .contact h3, .work-history h3, .education h3 {
+            font-size: 1.5rem;
+        }
+
+    /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
 
     /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
@@ -643,6 +753,8 @@ footer li a:hover {
         padding: 1rem 6rem;
     }
 
+    /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
+
     /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
     .envira-gallery-public img {
@@ -714,6 +826,8 @@ footer li a:hover {
     .single-container {
         padding: 1rem 12rem;
     }
+
+/* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
 
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
