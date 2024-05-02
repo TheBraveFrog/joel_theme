@@ -26,10 +26,9 @@ get_header();
                 $responsibilities = get_field('responsibilities');
                 $takeaways = get_field('takeaways');
                 $link = get_field('link');
-                $link_url = isset($link['url']);
-                $link_title = isset($link['title']);
+                $link_url = isset($link['url']) ? $link['url'] : '';
+                $link_title = isset($link['title']) ? $link['title'] : '';
                 $link_target = isset($link['target']) ? $link['target'] : '_self'; 
-                $project_images = get_field('images');
                 $project_images = get_field('images');
 
                 $processed_images = array();
@@ -75,7 +74,6 @@ get_header();
                 };
 
                 if ($link) {
-                    echo '<h3>See More Info</h3>';
                     echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '">' . esc_html($link_title) . '</a>';
                     };
 
