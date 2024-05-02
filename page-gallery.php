@@ -7,6 +7,9 @@
 
  $title = "Gallery";
 get_header();
+?>
+<h1 class="page-title">Gallery</h1>
+<?php
 if ( function_exists( 'envira_gallery' ) ) { envira_gallery( 'gallery', 'slug' ); }
 ?>
 

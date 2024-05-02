@@ -24,6 +24,15 @@ p, li, a {
     font-family: "Hind", sans-serif;
 }
 
+.page-title {
+    text-align: center;
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    animation: rainbow 5s ease-in-out infinite;
+    background-size: 200% 200%;
+    padding: .5rem;
+    font-size: 3rem;
+}
+
 /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
 header {
@@ -331,6 +340,12 @@ header .button-space{
 
 /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
 
+.resume-image {
+    border-radius: 100rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
 .resume-page h2:not(.pro-title h2), .resume-page h3:not(.pro-title h3) {
     /* color: #14f195; */
     -webkit-background-clip: text;
@@ -351,20 +366,23 @@ header .button-space{
 }
 
 .pro-title {
-    background: linear-gradient(135deg, #9945ff, #14f195);
-    animation: rainbow 5s ease-in-out infinite;
-    background-size: 200% 200%;
     padding: 1rem;
-    text-align: center;
-}
-
-.pro-title h1 {
-    font-size: 3rem;
+    max-width: 67.5rem;
+    margin: 0 auto;
 }
 
 .pro-title h2 {
+    font-size: 3rem;
+}
+
+.pro-title h3 {
     font-size: 1.75rem;
     color: #fff;
+}
+
+.resume-down {
+    background-color: #000;
+    border-radius: 5px;
 }
 
 .introduction {
@@ -384,6 +402,10 @@ header .button-space{
     background-color: #13131b;
 }
 
+.contact-grid div:nth-child(3) {
+    margin-top: 1rem;
+}
+
 .contact h2, .skills h2, .work-history h2, .certifications h2, .education h2 {
     font-size: 1.5rem;
 }
@@ -400,17 +422,50 @@ header .button-space{
     font-weight: normal;
 }
 
-.contact svg {
+.contact a:nth-child(1) svg, .contact a:nth-child(2) svg {
     width: 3rem;
     height: 3rem;
+    vertical-align: middle;
 }
 
-.contact a {
+.contact a:nth-child(3) svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.contact a:nth-child(1) {
     text-decoration: none;
+    padding: .5rem .5rem .5rem 0;
+}
+
+.contact a:nth-child(2) {
+    text-decoration: none;
+    padding: .5rem;
+    margin-right: 1rem;
+}
+
+.contact a:nth-child(3) {
+    text-decoration: none;
+    padding: .25rem .5rem;
+    text-decoration: none;
+    color: #fff;
 }
 
 .work-history div, .education div{
     padding: 1rem 0;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: 78% 22%;
+}
+
+.cert-grid .cert-years {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 1.25rem;
 }
 
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
@@ -551,6 +606,34 @@ footer li a:hover {
 
     /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
 
+        .pro-title {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, auto);
+            height: 20rem;
+        }
+
+        .pro-title h2 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .pro-title h3 {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .pro-title .resume-image {
+            grid-column: 2;
+            grid-row: 1 / span 4;
+        }
+
+        .resume-image {
+            margin: 0 0 0 auto;
+            width: 21rem;
+            height: 21rem;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(3, auto);
@@ -561,9 +644,9 @@ footer li a:hover {
             grid-template-columns: repeat(2, 1fr);
         }
 
-        .work-history div, .certifications div, .education div {
+        .work-history div, .education div {
             display: grid;
-            grid-template-columns: 85% 15%;
+            grid-template-columns: 78% 22%;
         }
 
         .work-history h3, 
