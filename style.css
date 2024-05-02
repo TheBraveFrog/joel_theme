@@ -342,13 +342,20 @@ header .button-space{
 }
 
 .project-content {
+    background-color: #13131b;
     display: flex;
     flex-direction: column;
 }
 
 .project-img img {
+    padding-top: 1rem;
+    height: 18rem;
     width: 18rem;
 }
+
+/* p 1.25
+h1 3rem
+h2 2rem */
 
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
