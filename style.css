@@ -33,6 +33,18 @@ p, li, a {
     font-size: 3rem;
 }
 
+.back-to-top {
+    position: fixed; 
+    bottom: -40px;
+    right: 15px;
+    z-index: 999;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.back-to-top svg {
+    width: 4rem;
+}
+
 /* --------------------------------------------------------------------- HEADER ---------------------------------------------------------------------*/
 
 header {
