@@ -9,7 +9,6 @@ get_header();
 ?>
 
 <div class="projects-container">
-    <div class="project-grid">
         <?php
         $args = array(
             'post_type' => 'project',
@@ -37,6 +36,7 @@ get_header();
                             $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
                             $image_src = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_src) {
+                                echo '<div class="project-grid">';
                                 echo'<div class="project-img">';
                                 echo '<img src="' . esc_url($image_src[0]) . '" alt="' . esc_attr($image_alt) . '"></a>';
                                 echo "</div>";
@@ -83,14 +83,14 @@ get_header();
                     echo '<h3>Learn More About '.esc_html($link_title).' Here</h3>';
                     echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '">' . esc_html($link_title) . '</a>';
                     echo '</div>';
-                    echo '</div>'; 
-                    };
+                };
+                echo '</div>';
+                echo '</div>'; 
                 endwhile;
                 wp_reset_postdata();
             endif;
             ?>
-        </div>
-
+</div>
 </div>
 
 <?php get_footer(); ?>
