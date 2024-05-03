@@ -17,22 +17,31 @@ get_header();
 <div class="resume-page">
         <h1 class="page-title">My Resume</h1>
     <section class="pro-introduction">
+
+<!-- ------------------------------------------------- NAME & JOB TITLE ------------------------------------------------- -->
+
         <div class="pro-title">
             <img class="resume-image" src="<?php echo $image_size ?>" alt="<?php echo $image_alt ?>">
             <h2>Joel Tobias</h2>
             <h3>Business Analyst</h3>
         </div>
+        
+<!-- ------------------------------------------------- CONTACT INFO ------------------------------------------------- -->
+
         <div class="contact">
                 <h2>Contact Me</h2>
             <div class="contact-grid">
+
                 <div>
                     <h3>Address:</h3>
                     <p>Edmonton, AB</p>
                 </div>
+
                 <div>
                     <h3>Email:</h3>
                     <p>Jrtobias7@hotmail.com</p>
                 </div>
+                
                 <div>
                     <a href="mailto:joeltobias@example.com?subject=Regarding%20Project&body=Hi%20there,%0D%0A%0D%0AI%20hope%20you%20are%20doing%20well.%20I%20wanted%20to%20discuss%20the%20project%20details.%0D%0A%0D%0ABest%20regards,">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M13.025 17H3.707l5.963-5.963L12 12.83l2.33-1.794 1.603 1.603a5.463 5.463 0 0 1 1.004-.41l-1.808-1.808L21 5.9v6.72a5.514 5.514 0 0 1 1 .64V5.5A1.504 1.504 0 0 0 20.5 4h-17A1.504 1.504 0 0 0 2 5.5v11A1.5 1.5 0 0 0 3.5 18h9.525c-.015-.165-.025-.331-.025-.5s.01-.335.025-.5zM3 16.293V5.901l5.871 4.52zM20.5 5c.009 0 .016.005.025.005L12 11.57 3.475 5.005c.009 0 .016-.005.025-.005zm-2 8a4.505 4.505 0 0 0-4.5 4.5 4.403 4.403 0 0 0 .05.5 4.49 4.49 0 0 0 4.45 4h.5v-1h-.5a3.495 3.495 0 0 1-3.45-3 3.455 3.455 0 0 1-.05-.5 3.498 3.498 0 0 1 5.947-2.5H20v.513A2.476 2.476 0 0 0 18.5 15a2.5 2.5 0 1 0 1.733 4.295A1.497 1.497 0 0 0 23 18.5v-1a4.555 4.555 0 0 0-4.5-4.5zm0 6a1.498 1.498 0 0 1-1.408-1 1.483 1.483 0 0 1-.092-.5 1.5 1.5 0 0 1 3 0 1.483 1.483 0 0 1-.092.5 1.498 1.498 0 0 1-1.408 1zm3.5-.5a.5.5 0 0 1-1 0v-3.447a3.639 3.639 0 0 1 1 2.447z"/><path fill="none" d="M0 0h24v24H0z"/></svg>
@@ -50,6 +59,9 @@ get_header();
                 </div>
             </div>
         </div>
+
+<!-- ------------------------------------------------- INTRODUCTION ------------------------------------------------- -->
+
         <div class="introduction">
             <p>Experienced professional with a background in the oil field and
             construction, accumulating over a decade of work experience in these
@@ -61,7 +73,7 @@ get_header();
         </div>
     </section>
 
-    <!-- ------------------------------------------------- SKILLS ------------------------------------------------- -->
+<!-- ------------------------------------------------- SKILLS ------------------------------------------------- -->
 
     <section class="skills">
         <h2>Skills</h2>
@@ -79,10 +91,11 @@ get_header();
         </div>
     </section>
 
-    <!-- ------------------------------------------------- WORK HISTORY ------------------------------------------------- -->
+<!-- ------------------------------------------------- WORK HISTORY ------------------------------------------------- -->
 
     <section class="work-history">
         <h2>Work History</h2>
+
         <div>
             <h3>Lead Journeyman Sheet Metal Installer</h3>
             <p class="year">2020-06 - 2022-07</p>
@@ -96,6 +109,7 @@ get_header();
                 <li>Delegate tasks to efficiently and safely complete jobs.</li>
             </ul>
         </div>
+
         <div>
             <h3>3rd Year Sheet Metal Apprentice</h3>
             <p class="year">2017-08 - 2020-02</p>
@@ -108,6 +122,7 @@ get_header();
                 <li>Ensured company's level of safety was maintained while completing work.</li>
             </ul>
         </div>
+
         <div>
             <h3>2nd Year Sheet Metal Apprentice</h3>
             <p class="year">2016-11 - 2017-07</p>
@@ -122,11 +137,12 @@ get_header();
         </div>
     </section>
 
-    <!-- ------------------------------------------------- CERTIFICATIONS ------------------------------------------------- -->
+<!-- ------------------------------------------------- CERTIFICATIONS ------------------------------------------------- -->
 
     <section class="certifications">
         <div>
             <h2>Certifications</h2>
+
             <div class="cert-grid">
                 <ul>
                     <li>Certified Scrum Master, Scrum Alliance</li>
@@ -135,23 +151,27 @@ get_header();
                     <li class="year">2023-10</li>
                 </ul>
             <div>
+
         <div>
     </section>
 
-    <!-- ------------------------------------------------- EDUCATION ------------------------------------------------- -->
+<!-- ------------------------------------------------- EDUCATION ------------------------------------------------- -->
 
     <section class="education">
         <h2>Education</h2>
+
         <div>
             <h3>Diploma: Digital Media And IT - Business Analyst</h3>
             <p class="year">2022-09 - Current</p>
             <p>Northern Alberta Institute of Technology (NAIT) - Edmonton, AB</p>
         </div>
+
         <div>
             <h3>Apprenticeship Program: Sheet Metal Worker</h3>
             <p class="year">2015-07 - 2021-06</p>
             <p>Northern Alberta Institute of Technology (NAIT) - Edmonton, AB</p>
         </div>
+
         <div>
             <h3>High School Diploma</h3>
             <p class="year">2006-09 - 2007-06</p>
