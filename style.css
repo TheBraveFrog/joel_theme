@@ -544,6 +544,18 @@ header .button-space{
 
 /* --------------------------------------------------------------------- FOOTER ---------------------------------------------------------------------*/
 
+.back-to-top {
+    position: fixed; 
+    bottom: -40px;
+    right: 15px;
+    z-index: 999;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.back-to-top svg {
+    width: 4rem;
+}
+
 footer {
     background-color: #13131b;
     padding: 3rem 1rem;
