@@ -280,6 +280,10 @@ header .button-space{
     background-size: 200% 200%;
 }
 
+.screen-reader-text {
+    display: none;
+}
+
 /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
 .single-post-thumbnail img  {
@@ -329,13 +333,37 @@ header .button-space{
     padding: 1rem;
 }
 
+.project-grid {
+    height: 100%;
+    background-color: #13131b;
+    border-radius: 5px;
+}
+
 .project-content {
     display: flex;
     flex-direction: column;
+    width: 100%;
+}
+
+.project-content a {
+    border-radius: 5px;
+    color: #fff;
+    padding: .2rem 0;
+    width: fit-content;
+}
+
+.project-content a:hover {
+    background: linear-gradient(135deg, #9945ff, #14f195);
+    background-size: 200% 200%;
+    animation: rainbow 5s ease-in-out infinite;
+    
 }
 
 .project-img img {
-    width: 18rem;
+    display: block;
+    height: 18rem;
+    object-fit: cover;
+    width: 100%;
 }
 
 /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
@@ -598,6 +626,17 @@ footer li a:hover {
             padding: 1rem 3rem;
         }
 
+    /* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+    .projects-container {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem 3rem;
+    }
+
+    
     /* --------------------------------------------------------------------- SINGLE ---------------------------------------------------------------------*/
 
         .single-container {
@@ -836,6 +875,13 @@ footer li a:hover {
         padding: 1rem 6rem;
     }
 
+    /* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem 6rem;
+    }
+
     /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
 
     /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
@@ -910,8 +956,6 @@ footer li a:hover {
         padding: 1rem 12rem;
     }
 
-/* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
-
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
     .envira-gallery-public {
@@ -930,6 +974,15 @@ footer li a:hover {
     footer {
         background-color: #13131b;
         padding: 3rem 12rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+      /* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+      .projects-container {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1rem 12rem;
     }
 }
 
