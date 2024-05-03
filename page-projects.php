@@ -82,8 +82,8 @@ get_header();
                 };
 
                 if ($link) {
-                    echo '<div>';
-                    echo '<h3>Learn More About '.esc_html($link_title).' Here</h3>';
+                    echo '<div class="more-btn">';
+                    echo '<h3>Learn More About '.esc_html($link_title).' Here:</h3>';
                     echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '">' . esc_html($link_title) . '</a>';
                     echo '</div>';
                 };
