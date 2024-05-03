@@ -9,8 +9,6 @@ get_header();
 ?>
 
 <div class="projects-container">
-
-    <div class="project-img">
         <?php
         $args = array(
             'post_type' => 'project',
@@ -23,17 +21,25 @@ get_header();
                 $query->the_post();
                 $project_title = get_field('title');
                 $project_description = get_field('description');
+                $responsibilities = get_field('responsibilities');
+                $takeaways = get_field('takeaways');
+                $link = get_field('link');
+                $link_url = isset($link['url']) ? $link['url'] : '';
+                $link_title = isset($link['title']) ? $link['title'] : '';
+                $link_target = isset($link['target']) ? $link['target'] : '_self'; 
                 $project_images = get_field('images');
 
                 $processed_images = array();
-
                 if ($project_images) {
                     foreach ($project_images as $image_id) {
                         if (!in_array($image_id, $processed_images)) {
                             $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
                             $image_src = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_src) {
-                                echo '<img src="' . esc_url($image_src[0]) . '" alt="' . esc_attr($image_alt) . '">';
+                                echo '<div class="project-grid">';
+                                echo'<div class="project-img">';
+                                echo '<img src="' . esc_url($image_src[0]) . '" alt="' . esc_attr($image_alt) . '"></a>';
+                                echo "</div>";
                             }
 
                             $processed_images[] = $image_id;
@@ -41,23 +47,50 @@ get_header();
                     }
                 }
                 ?>
-            </div>
-            <div class="project-content">
                 <?php
                 if ($project_title) {
+                    echo '<div class="project-content">';
                     echo '<h2>' . esc_html($project_title) . '</h2>';
                 }
 
                 if ($project_description) {
+                    echo '<div>';
                     echo '<p>' . esc_html($project_description) . '</p>';
+                    echo '</div>'; 
                 }
 
-                    endwhile;
-                    wp_reset_postdata();
-                endif;
-                ?>
-            </div>
+                if ($responsibilities) {
+                    echo '<div>';
+                    echo '<h3>Responsibilities:</h3>'; 
+                    echo '<ul>'; 
+                    $responsibility_paragraphs = explode("\n", $responsibilities);
+                    foreach ($responsibility_paragraphs as $responsibility_paragraph) {
+                        echo '<li>' . esc_html($responsibility_paragraph) . '</li>';
+                    }
+                    echo '</ul>';
+                    echo '</div>'; 
+                }
 
+                if ($takeaways) {
+                echo '<div>';    
+                echo '<h3>Takeaways</h3>';
+                echo '<p>' . esc_html($takeaways) . '</p>';
+                echo '</div>';
+                };
+
+                if ($link) {
+                    echo '<div>';
+                    echo '<h3>Learn More About '.esc_html($link_title).' Here</h3>';
+                    echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '">' . esc_html($link_title) . '</a>';
+                    echo '</div>';
+                };
+                echo '</div>';
+                echo '</div>'; 
+                endwhile;
+                wp_reset_postdata();
+            endif;
+            ?>
+</div>
 </div>
 
 <?php get_footer(); ?>

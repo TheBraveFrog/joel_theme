@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/reset.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <title>Joel Tobias |<?php single_post_title(); ?> </title>
+    <title>Joel Tobias | <?php single_post_title(); ?> </title>
     <meta name="description" content="About Joel Tobias" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
