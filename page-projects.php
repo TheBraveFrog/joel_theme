@@ -8,6 +8,8 @@
 get_header();
 ?>
 
+<h1 class="page-title">Projects</h1>
+
 <div class="projects-container">
         <?php
         $args = array(
