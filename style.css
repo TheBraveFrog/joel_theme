@@ -343,20 +343,45 @@ header .button-space{
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding: 1rem;
+}
+
+.project-content h2 {
+    font-size: 2rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(90deg, #9945ff, #14f195);
+    background-size: 150% 150%;
+    animation: rainbow 5s ease-in-out infinite;
+    background-clip: text;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.more-btn h3 {
+    margin-bottom: 1rem;
+}
+
+.more-btn {
+    padding: 0 0 .75rem 0;
 }
 
 .project-content a {
     border-radius: 5px;
     color: #fff;
-    padding: .2rem 0;
+    padding: .2rem .5rem;
     width: fit-content;
+    background-color: #000;
+    text-decoration: none;
 }
 
 .project-content a:hover {
     background: linear-gradient(135deg, #9945ff, #14f195);
     background-size: 200% 200%;
     animation: rainbow 5s ease-in-out infinite;
-    
 }
 
 .project-img img {
@@ -364,6 +389,8 @@ header .button-space{
     height: 18rem;
     object-fit: cover;
     width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 /* --------------------------------------------------------------------- RESUME ---------------------------------------------------------------------*/
@@ -956,6 +983,12 @@ footer li a:hover {
         padding: 1rem 12rem;
     }
 
+/* --------------------------------------------------------------------- PROJECTS ---------------------------------------------------------------------*/
+
+     .projects-container {
+        padding: 1rem 12rem;
+    }
+
 /* --------------------------------------------------------------------- GALLERY ---------------------------------------------------------------------*/
 
     .envira-gallery-public {
@@ -982,7 +1015,6 @@ footer li a:hover {
 
       .projects-container {
         grid-template-columns: repeat(4, 1fr);
-        padding: 1rem 12rem;
     }
 }
 
