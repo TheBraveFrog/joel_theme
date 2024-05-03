@@ -37,6 +37,9 @@ get_header();
                             $image_src = wp_get_attachment_image_src($image_id, 'full');
                             if ($image_src) {
                                 echo '<div class="project-grid">';
+                                if (!empty($link_url)) {
+                                    echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '" class="project-grid">';
+                                }
                                 echo'<div class="project-img">';
                                 echo '<img src="' . esc_url($image_src[0]) . '" alt="' . esc_attr($image_alt) . '"></a>';
                                 echo "</div>";
@@ -84,13 +87,13 @@ get_header();
                     echo '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '">' . esc_html($link_title) . '</a>';
                     echo '</div>';
                 };
+                echo '</a>'; 
                 echo '</div>';
                 echo '</div>'; 
                 endwhile;
                 wp_reset_postdata();
             endif;
             ?>
-</div>
 </div>
 
 <?php get_footer(); ?>
